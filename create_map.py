@@ -1,7 +1,12 @@
+import sys
 import pygal
 import pandas as pd
 
-df = pd.read_csv('locations.csv')
+if len(sys.argv) != 2:
+    print('usage: python3 create_map.py data_file.csv')
+    exit(1)
+
+df = pd.read_csv(sys.argv[1])
 
 s = set(df['country'])
 
@@ -13,7 +18,8 @@ for c in s:
         if df['country'][i] == c:
             sum += float(df['time'][i])
             n += 1
-    d[c.lower()] = sum / n
+    if n != 0: # sometimes a nan appears in set, short patch
+        d[c.lower()] = sum / n
 
 worldmap_chart = pygal.maps.world.World()
 worldmap_chart.title = 'Ping'
