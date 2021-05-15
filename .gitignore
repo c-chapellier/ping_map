@@ -1,0 +1,4 @@
+# Do not track csv png and svg files at root
+/*.csv
+/*.png
+/*.svg

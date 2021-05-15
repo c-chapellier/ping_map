@@ -1,4 +1,4 @@
-ip,city,region,country,latitude,longitude,time
+ip,city,region,country,latitude,longitude,rtt
 82.32.178.53,Crawley,England,GB,51.1103444,-0.1801094,52.115
 93.148.244.150,Milan,Lombardy,IT,45.4668,9.1905,67.425
 27.205.101.53,Qingdao (Jiaozhou Shi),Shandong,CN,36.3619633,120.08799539626071,190.063
